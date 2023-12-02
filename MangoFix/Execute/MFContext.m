@@ -28,6 +28,13 @@
     return self;
 }
 
+- (instancetype)init{
+    if (self = [super init]) {
+        _interpreter = [[MFInterpreter alloc] init];
+    }
+    return self;
+}
+
 - (void)evalMangoScriptWithURL:(NSURL *)url{
     @autoreleasepool {
         NSError *error;
@@ -79,5 +86,13 @@
         mf_interpret(self.interpreter);
     }
 }
-
+- (void)evalMangoScriptWithDebugString:(NSString *)mangoFixString{
+    @autoreleasepool {
+        mf_set_current_compile_util(self.interpreter);
+        mf_add_built_in(self.interpreter);
+        [self.interpreter compileSourceWithString:mangoFixString];
+        mf_set_current_compile_util(nil);
+        mf_interpret(self.interpreter);
+    }
+}
 @end

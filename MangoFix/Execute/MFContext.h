@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithAES128Key:(NSString *)key iv:(NSString *)iv NS_DESIGNATED_INITIALIZER;
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)init;
 
 /**
  Evaluate MangoFix code that encrypted by AES128(ECBMode) from a url.
@@ -56,6 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)evalMangoScriptWithDebugURL:(NSURL *)url;
 
+
+- (void)evalMangoScriptWithDebugString:(NSString *)mangoFixString;
 @end
 
 NS_ASSUME_NONNULL_END

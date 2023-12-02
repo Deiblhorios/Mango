@@ -1,16 +1,5 @@
 [MangoFix中文资料集合](README-CN.md)
 
-MangoFix 学习讨论QQ群：766215773
-
-MangoFix的收费版本已经发布：https://github.com/YPLiang19/Arhat
-现在可以申请三个月的免费使用（单独联系群主）
-收费版本新特性：
-1. 删除了libffi/lex/yacc等容易被拒的第三方库
-2. 已经对类名接口名做了简单混淆
-3. 一次性购买12个月赠送定制化混淆
-4. 支持可变参数和NSLog格式化打印
-5. 每月199元，国庆前购买买优惠价99元每月
-
 
 # Mango
 MangoFix is a DSL which syntax is very similar to Objective-C，MangoFix is also an iOS  App hotfix SDK. You can use MangoFix method replace any Objective-C or Swift method (Support Swfit from MangoFxi 1.5).
