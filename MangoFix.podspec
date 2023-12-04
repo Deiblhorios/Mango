@@ -8,10 +8,10 @@ DESC
 s.homepage     = "https://github.com/Deiblhorios/Mango"
 s.license      = "MIT"
 s.author             = { "Deiblhor" => "deblhorios@gmail.com" }
-s.ios.deployment_target = "11.0"
+s.ios.deployment_target = "12.0"
 s.source       = { :git => "https://github.com/Deiblhorios/Mango.git", :tag => "#{s.version}" }
 s.pod_target_xcconfig = { 'GCC_INPUT_FILETYPE' => 'sourcecode.c.objc' }
-s.source_files  = "MangoFix/**/*.{h,m,c,y,l}"
+s.source_files  = "MangoFix/**/*.{h,m,c,y,l,mm}"
 s.vendored_libraries  = 'MangoFix/libffi/libffi.a'
 s.dependency 'symdl'
 end
