@@ -35,11 +35,11 @@
 	}
 	
 
-int yywrap(){
+    int yywrap(void){
 	return 1;
 }
 
-static void increment_line_number(){
+    static void increment_line_number(void){
 	MFInterpreter *interpreter = mf_get_current_compile_util();
 	interpreter.currentLineNumber++;
 }

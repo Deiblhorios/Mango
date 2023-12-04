@@ -10,7 +10,7 @@
 #import "mf_ast.h"
 #import "runenv.h"
 
-static void add_built_in_struct_declare(){
+static void add_built_in_struct_declare(void){
 	MFStructDeclareTable *table = [MFStructDeclareTable shareInstance];
 	
 	MFStructDeclare *cgPoinerStructDeclare = [[MFStructDeclare alloc] initWithName:@"CGPoint" typeEncoding:"{CGPoint=dd}" keys:@[@"x",@"y"]];

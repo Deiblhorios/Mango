@@ -300,12 +300,12 @@ static MFStatementResult *execute_return_statement(MFInterpreter *inter, MFScope
 }
 
 
-static MFStatementResult *execute_break_statement(){
+static MFStatementResult *execute_break_statement(void){
 	return [MFStatementResult breakResult];
 }
 
 
-static MFStatementResult *execute_continue_statement(){
+static MFStatementResult *execute_continue_statement(void){
 	return [MFStatementResult continueResult];
 }
 

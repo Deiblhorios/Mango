@@ -9,6 +9,6 @@ target 'MangoFixSwfitDemo' do
 
   pod 'MangoFix', :path => '../'
   # pod 'MangoFix'
-  pod 'Masonry'
+#  pod 'Masonry'
 
 end

@@ -15,7 +15,7 @@ static int st_string_literal_buffer_size = 0;
 static int st_string_literal_buffer_alloc_size = 0;
 
 
-MFInterpreter *mf_get_current_compile_util(){
+MFInterpreter *mf_get_current_compile_util(void){
     return  [NSThread currentThread].threadDictionary[@"current_compile_util"];
 }
 
@@ -35,7 +35,7 @@ NSString *mf_create_identifier(char *str){
 }
 
 
-void mf_open_string_literal_buf(){
+void mf_open_string_literal_buf(void){
 	st_string_literal_buffer_size = 0;
 }
 
@@ -61,7 +61,7 @@ void mf_rest_string_literal_buffer(void){
 }
 
 
-const char *mf_end_string_literal(){
+const char *mf_end_string_literal(void){
 	mf_append_string_literal('\0');
 	size_t strLen = strlen(st_string_literal_buffer);
 	char *str = calloc(strLen + 1, 1);
@@ -286,14 +286,14 @@ MFDoWhileStatement *mf_create_do_while_statement(MFBlockBody *block, MFExpressio
 }
 
 
-MFContinueStatement *mf_create_continue_statement(){
+MFContinueStatement *mf_create_continue_statement(void){
 	MFContinueStatement *statement = [[MFContinueStatement alloc] init];
 	statement.kind = MFStatementKindContinue;
 	return statement;
 }
 
 
-MFBreakStatement *mf_create_break_statement(){
+MFBreakStatement *mf_create_break_statement(void){
 	MFBreakStatement *statement = [[MFBreakStatement alloc] init];
 	statement.kind = MFStatementKindBreak;
 	return statement;
@@ -309,7 +309,7 @@ MFReturnStatement *mf_create_return_statement(MFExpression *retValExpr){
 }
 
 
-MFBlockBody *mf_open_block_statement(){
+MFBlockBody *mf_open_block_statement(void){
 	MFBlockBody *block = [[MFBlockBody alloc] init];
 	MFInterpreter *interpreter = mf_get_current_compile_util();
 	block.outBlock = interpreter.currentBlock;
