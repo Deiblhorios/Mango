@@ -12,7 +12,8 @@ s.ios.deployment_target = "12.0"
 s.source       = { :git => "https://github.com/Deiblhorios/Mango.git", :tag => "#{s.version}" }
 s.pod_target_xcconfig = { 'GCC_INPUT_FILETYPE' => 'sourcecode.c.objc' }
 s.source_files  = "MangoFix/**/*.{h,m,c,y,l}"
-s.vendored_libraries  = 'MangoFix/libffi/libffi.a'
+# s.vendored_libraries  = 'MangoFix/libffi/libffi.a'
+s.vendored_frameworks  = 'libffiSDK.xcframework'
 s.dependency 'symdl'
 end
 
