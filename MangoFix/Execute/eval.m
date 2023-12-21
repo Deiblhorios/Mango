@@ -85,7 +85,7 @@ static MFValue *invoke_sueper_values(id instance, Class superClass, SEL sel, NSA
     NSMethodSignature *sig = [instance methodSignatureForSelector:sel];
     NSUInteger argCount = sig.numberOfArguments;
     
-    MFValue *v;
+//    MFValue *v;
     
     void **args = alloca(sizeof(void *) * argCount);
     ffi_type **argTypes = alloca(sizeof(ffi_type *) * argCount);
